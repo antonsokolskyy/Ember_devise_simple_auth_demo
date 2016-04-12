@@ -20,6 +20,11 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    // API server
+    ENV.APP.host = "http://localhost:3000";
+
+    // Login, registration URLs for devise
+    ENV.APP.serverTokenEndpoint = ENV.APP.host+"/users/sign_in";
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

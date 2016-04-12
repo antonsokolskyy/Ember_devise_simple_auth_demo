@@ -1,0 +1,15 @@
+{{#link-to 'index'}}
+  Home
+{{/link-to}}
+
+{{#link-to 'protected'}}
+  Protected
+{{/link-to}}  
+
+<br>
+
+{{#if session.isAuthenticated}}
+  <button {{action 'logout'}}>Logout</button>
+{{else}}
+  <button {{action 'login'}}>Login</button>
+{{/if}}
