@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   session: Ember.inject.service('session'),
   actions: {
     login() {
-      // send action which is transitionToLoginRoute
+      // send action which is transitionToLoginRoute from application route
       this.sendAction('login');
     },
     logout() {
