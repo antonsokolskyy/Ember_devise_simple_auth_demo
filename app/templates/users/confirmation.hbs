@@ -1,0 +1,19 @@
+<h3>Email Confirmation</h3>
+
+{{#if successfulConfirmation}}
+  <p class="confirmation-message">
+    Thank you for confirming your email address. 
+    You can login <span data-test-selector="login-link">{{#link-to "login"}}here.{{/link-to}}</span>
+  </p>
+{{/if}}
+
+{{#if errors}}
+  <p class="error messages">
+    We are unable to confirm your email address for the following reasons: 
+  </p>
+  {{#each-in errors as |errorItem errorMessages|}}
+    {{#each errorMessages as |message|}}
+      <span data-test-selector="error-message">email {{message}} </span>
+    {{/each}}
+  {{/each-in}}
+{{/if}}

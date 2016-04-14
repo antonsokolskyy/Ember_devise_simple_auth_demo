@@ -8,6 +8,11 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('protected');
+  this.route('registration');
+
+  this.route('users', function() {
+    this.route('confirmation');
+  });
 });
 
 export default Router;

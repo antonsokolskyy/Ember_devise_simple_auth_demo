@@ -1,0 +1,22 @@
+{{#if successfulRegistration}}
+  <p class="confirmation-message">A confirmation email has been sent to {{email}}. Click the link sent in the email to activate your account.</p>
+{{else}}
+  <h1>Create New Account</h1>
+
+  <form{{action 'register' on='submit'}}>
+    <label for='email'>Email</label>
+    {{input value=email placeholder='Enter email'}}
+  
+    <label for='password'>Password</label>
+    {{input value=password placeholder='Enter password' type='password'}}
+
+    <label for=':password_confirmation'>Password Confirmation</label>
+    {{input value=:password_confirmation placeholder='Enter password' type='password'}}
+  
+    <button type='submit'>Register</button>
+
+  </form>
+{{/if}}
+{{#if registrationError}}
+  <p class="confirmation-message">Registration failed</p>
+{{/if}}

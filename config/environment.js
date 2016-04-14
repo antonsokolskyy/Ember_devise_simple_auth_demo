@@ -25,6 +25,8 @@ module.exports = function(environment) {
 
     // Login, registration URLs for devise
     ENV.APP.serverTokenEndpoint = ENV.APP.host+"/users/sign_in";
+    ENV.APP.registrationEndpoint = ENV.APP.host+"/users";
+    ENV.APP.confirmationEndpoint = ENV.APP.host+"/users/confirmation";
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
