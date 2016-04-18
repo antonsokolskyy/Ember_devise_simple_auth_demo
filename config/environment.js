@@ -23,9 +23,9 @@ module.exports = function(environment) {
   ENV.APP.host = process.env.EMBER_API_HOST;
 
   // Login, registration URLs for devise
-  ENV.APP.serverTokenEndpoint = ENV.APP.host+"/users/sign_in";
-  ENV.APP.registrationEndpoint = ENV.APP.host+"/users";
-  ENV.APP.confirmationEndpoint = ENV.APP.host+"/users/confirmation";
+  ENV.APP.serverTokenEndpoint = ENV.APP.host+"/json_api/users/sign_in";
+  ENV.APP.registrationEndpoint = ENV.APP.host+"/json_api/users";
+  ENV.APP.confirmationEndpoint = ENV.APP.host+"/json_api/users/confirmation";
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
